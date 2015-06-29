@@ -1,0 +1,50 @@
+<html><head>
+	<meta charset="utf-8">
+	<title>Responsive Image Maps jQuery Plugin</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+	<script src="../../js/ios-orientationchange-fix.min.js"></script>
+	<style>
+	body {
+		font-family: Helvetica, Arial, sans-serif;
+        
+	}
+	h1 {
+		font-size: 20px;
+	}
+	div {
+		width: 100%;
+	}
+	img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	</style>
+</head>
+<body>
+<div>
+	
+	<img style="position: relative; width: 100%; height: 100%;"
+         src="images/AppUI.jpg" usemap="#powerpuffgirls" alt="">
+	<map name="powerpuffgirls">
+        <area shape="rect" coords="0,250,300,700" href="http://www.axcel.sg" title="Buttercup" alt="Buttercup">
+		<area shape="rect" coords="250,100,360,230" href="http://www.google.com" title="Blossom" alt="Blossom">
+		<area shape="rect" coords="380,250,490,380" href="http://www.yahoo.com" title="Bubbles" alt="Bubbles">
+</map>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	
+});
+</script>
+
+
+</body></html>
